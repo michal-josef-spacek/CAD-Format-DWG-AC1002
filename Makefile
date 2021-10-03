@@ -25,6 +25,7 @@
 #     VERSION => q[0.01]
 #     dist => {  }
 #     realclean => { FILES=>q[MYMETA.yml] }
+#     test => { TESTS=>q[t/CAD-Format-DWG-AC1002/*.t] }
 
 # --- MakeMaker post_initialize section:
 
@@ -736,7 +737,7 @@ $(MAKE_APERL_FILE) : static $(FIRST_MAKEFILE) pm_to_blib
 TEST_VERBOSE=0
 TEST_TYPE=test_$(LINKTYPE)
 TEST_FILE = test.pl
-TEST_FILES = t/*.t
+TEST_FILES = t/CAD-Format-DWG-AC1002/*.t
 TESTDB_SW = -d
 
 testdb :: testdb_$(LINKTYPE)
