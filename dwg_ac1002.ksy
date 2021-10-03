@@ -554,34 +554,7 @@ types:
       - id: user_real_5
         size: 8
         doc: $USERR5
-      - id: dim_alternate_units
-        type: s1
-        doc: 0x03a1, $DIMALT
-      - id: dim_alternate_units_decimal_places
-        type: s1
-        doc: 0x03a2, $DIMALTD
-      - id: dim_associative
-        type: s1
-        doc: 0x03a3, $DIMASO
-      - id: dim_sho
-        type: s1
-        doc: 0x03a4, $DIMSHO
-      - id: dim_measurement_postfix
-        size: 16
-        type: str
-        encoding: ASCII
-        doc: $DIMPOST, TODO And prefix?
-      - id: dim_alternate_measurement_postfix
-        size: 16
-        type: str
-        encoding: ASCII
-        doc: $DIMAPOST, TODO And prefix
-      - id: dim_alternate_units_multiplier
-        size: 8
-        doc: 0x03c5-0x03cc, $DIMALTF
-      - id: dim_linear_measurements_scale_factor
-        size: 8
-        doc: 0x03cd-0x03d4, $DIMLFAC
+        if: version_micro == 114
     instances:
       create_date:
         value: create_date_days + (create_date_ms / 86400000.0)

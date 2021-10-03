@@ -2461,14 +2461,6 @@ sub _read {
     $self->{point_mode} = $self->{_io}->read_s2le();
     $self->{point_size} = $self->{_io}->read_bytes(8);
     $self->{polyline_width} = $self->{_io}->read_bytes(8);
-    $self->{dim_alternate_units} = $self->{_io}->read_s1();
-    $self->{dim_alternate_units_decimal_places} = $self->{_io}->read_s1();
-    $self->{dim_associative} = $self->{_io}->read_s1();
-    $self->{dim_sho} = $self->{_io}->read_s1();
-    $self->{dim_measurement_postfix} = Encode::decode("ASCII", $self->{_io}->read_bytes(16));
-    $self->{dim_alternate_measurement_postfix} = Encode::decode("ASCII", $self->{_io}->read_bytes(16));
-    $self->{dim_alternate_units_multiplier} = $self->{_io}->read_bytes(8);
-    $self->{dim_linear_measurements_scale_factor} = $self->{_io}->read_bytes(8);
     if ($self->version_micro() == 114) {
         $self->{user_integer_1} = $self->{_io}->read_s2le();
     }
@@ -3388,46 +3380,6 @@ sub user_real_4 {
 sub user_real_5 {
     my ($self) = @_;
     return $self->{user_real_5};
-}
-
-sub dim_alternate_units {
-    my ($self) = @_;
-    return $self->{dim_alternate_units};
-}
-
-sub dim_alternate_units_decimal_places {
-    my ($self) = @_;
-    return $self->{dim_alternate_units_decimal_places};
-}
-
-sub dim_associative {
-    my ($self) = @_;
-    return $self->{dim_associative};
-}
-
-sub dim_sho {
-    my ($self) = @_;
-    return $self->{dim_sho};
-}
-
-sub dim_measurement_postfix {
-    my ($self) = @_;
-    return $self->{dim_measurement_postfix};
-}
-
-sub dim_alternate_measurement_postfix {
-    my ($self) = @_;
-    return $self->{dim_alternate_measurement_postfix};
-}
-
-sub dim_alternate_units_multiplier {
-    my ($self) = @_;
-    return $self->{dim_alternate_units_multiplier};
-}
-
-sub dim_linear_measurements_scale_factor {
-    my ($self) = @_;
-    return $self->{dim_linear_measurements_scale_factor};
 }
 
 ########################################################################
