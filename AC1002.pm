@@ -2461,16 +2461,6 @@ sub _read {
     $self->{point_mode} = $self->{_io}->read_s2le();
     $self->{point_size} = $self->{_io}->read_bytes(8);
     $self->{polyline_width} = $self->{_io}->read_bytes(8);
-    $self->{user_integer_1} = $self->{_io}->read_s2le();
-    $self->{user_integer_2} = $self->{_io}->read_s2le();
-    $self->{user_integer_3} = $self->{_io}->read_s2le();
-    $self->{user_integer_4} = $self->{_io}->read_s2le();
-    $self->{user_integer_5} = $self->{_io}->read_s2le();
-    $self->{user_real_1} = $self->{_io}->read_bytes(8);
-    $self->{user_real_2} = $self->{_io}->read_bytes(8);
-    $self->{user_real_3} = $self->{_io}->read_bytes(8);
-    $self->{user_real_4} = $self->{_io}->read_bytes(8);
-    $self->{user_real_5} = $self->{_io}->read_bytes(8);
     $self->{dim_alternate_units} = $self->{_io}->read_s1();
     $self->{dim_alternate_units_decimal_places} = $self->{_io}->read_s1();
     $self->{dim_associative} = $self->{_io}->read_s1();
@@ -2479,6 +2469,36 @@ sub _read {
     $self->{dim_alternate_measurement_postfix} = Encode::decode("ASCII", $self->{_io}->read_bytes(16));
     $self->{dim_alternate_units_multiplier} = $self->{_io}->read_bytes(8);
     $self->{dim_linear_measurements_scale_factor} = $self->{_io}->read_bytes(8);
+    if ($self->version_micro() == 114) {
+        $self->{user_integer_1} = $self->{_io}->read_s2le();
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_integer_2} = $self->{_io}->read_s2le();
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_integer_3} = $self->{_io}->read_s2le();
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_integer_4} = $self->{_io}->read_s2le();
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_integer_5} = $self->{_io}->read_s2le();
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_real_1} = $self->{_io}->read_bytes(8);
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_real_2} = $self->{_io}->read_bytes(8);
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_real_3} = $self->{_io}->read_bytes(8);
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_real_4} = $self->{_io}->read_bytes(8);
+    }
+    if ($self->version_micro() == 114) {
+        $self->{user_real_5} = $self->{_io}->read_bytes(8);
+    }
 }
 
 sub create_date {

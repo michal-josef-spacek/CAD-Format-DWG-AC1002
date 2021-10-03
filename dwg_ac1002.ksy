@@ -518,30 +518,39 @@ types:
       - id: user_integer_1
         type: s2
         doc: 0x035f-0x0360, $USERI1
+        if: version_micro == 114
       - id: user_integer_2
         type: s2
         doc: 0x0361-0x0362, $USERI2
+        if: version_micro == 114
       - id: user_integer_3
         type: s2
         doc: 0x0363-0x0364, $USERI3
+        if: version_micro == 114
       - id: user_integer_4
         type: s2
         doc: 0x0365-0x0366, $USERI4
+        if: version_micro == 114
       - id: user_integer_5
         type: s2
         doc: 0x0367-0x0368, $USERI5
+        if: version_micro == 114
       - id: user_real_1
         size: 8
         doc: $USERR1
+        if: version_micro == 114
       - id: user_real_2
         size: 8
         doc: $USERR2
+        if: version_micro == 114
       - id: user_real_3
         size: 8
         doc: $USERR3
+        if: version_micro == 114
       - id: user_real_4
         size: 8
         doc: $USERR4
+        if: version_micro == 114
       - id: user_real_5
         size: 8
         doc: $USERR5
