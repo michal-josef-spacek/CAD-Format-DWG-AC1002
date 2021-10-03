@@ -43,6 +43,7 @@ seq:
   - id: block_entities
     type: real_entities
     size: header.blocks_end - header.blocks_start
+    if: header.blocks_end != 0
 types:
   block:
     seq:

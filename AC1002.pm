@@ -132,9 +132,11 @@ sub _read {
     for (my $i = 0; $i < $n_views; $i++) {
         $self->{views}[$i] = CAD::Format::DWG::AC1002::View->new($self->{_io}, $self, $self->{_root});
     }
-    $self->{_raw_block_entities} = $self->{_io}->read_bytes(($self->header()->blocks_end() - $self->header()->blocks_start()));
-    my $io__raw_block_entities = IO::KaitaiStruct::Stream->new($self->{_raw_block_entities});
-    $self->{block_entities} = CAD::Format::DWG::AC1002::RealEntities->new($io__raw_block_entities, $self, $self->{_root});
+    if ($self->header()->blocks_end() != 0) {
+        $self->{_raw_block_entities} = $self->{_io}->read_bytes(($self->header()->blocks_end() - $self->header()->blocks_start()));
+        my $io__raw_block_entities = IO::KaitaiStruct::Stream->new($self->{_raw_block_entities});
+        $self->{block_entities} = CAD::Format::DWG::AC1002::RealEntities->new($io__raw_block_entities, $self, $self->{_root});
+    }
 }
 
 sub header {
