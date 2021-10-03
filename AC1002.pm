@@ -1615,20 +1615,23 @@ sub _read {
     if ($self->entity_common()->flag2_8()) {
         $self->{angle} = $self->{_io}->read_f8le();
     }
-    if ($self->entity_common()->flag2_6()) {
+    if ($self->entity_common()->flag2_7()) {
         $self->{unknown1} = $self->{_io}->read_f8le();
     }
-    if ($self->entity_common()->flag2_5()) {
-        $self->{unknown2} = $self->{_io}->read_u1();
+    if ($self->entity_common()->flag2_6()) {
+        $self->{unknown2} = $self->{_io}->read_f8le();
     }
-    if ($self->entity_common()->flag2_3()) {
+    if ($self->entity_common()->flag2_5()) {
         $self->{unknown3} = $self->{_io}->read_u1();
     }
-    if ($self->entity_common()->flag2_2()) {
-        $self->{unknown4} = $self->{_io}->read_f8le();
+    if ($self->entity_common()->flag2_3()) {
+        $self->{unknown4} = $self->{_io}->read_u1();
     }
     if ($self->entity_common()->flag2_2()) {
         $self->{unknown5} = $self->{_io}->read_f8le();
+    }
+    if ($self->entity_common()->flag2_2()) {
+        $self->{unknown6} = $self->{_io}->read_f8le();
     }
 }
 
@@ -1690,6 +1693,11 @@ sub unknown4 {
 sub unknown5 {
     my ($self) = @_;
     return $self->{unknown5};
+}
+
+sub unknown6 {
+    my ($self) = @_;
+    return $self->{unknown6};
 }
 
 ########################################################################
