@@ -1258,14 +1258,12 @@ types:
   view:
     seq:
       - id: u1
-        size: 4
+        type: u1
       - id: view_name
-        size: 31
+        size: 32
         type: str
         encoding: ASCII
         terminator: 0x2e
-      - id: u2
-        type: u1
       - id: view_size
         type: f8
         doc: VIEW/40
@@ -1287,6 +1285,10 @@ types:
       - id: view_dir_z
         type: f8
         doc: VIEW/31
+      - id: u3
+        type: s2
+      - id: u4
+        type: u1
 enums:
   entities:
     1: line
