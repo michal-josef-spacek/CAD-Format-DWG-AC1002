@@ -1023,6 +1023,21 @@ types:
       - id: angle
         type: f8
         if: entity_common.flag2_8
+      - id: unknown1
+        type: f8
+        if: entity_common.flag2_6
+      - id: unknown2
+        type: u1
+        if: entity_common.flag2_5
+      - id: unknown3
+        type: u1
+        if: entity_common.flag2_3
+      - id: unknown4
+        type: f8
+        if: entity_common.flag2_2
+      - id: unknown5
+        type: f8
+        if: entity_common.flag2_2
   entity_trace:
     seq:
       - id: entity_common
