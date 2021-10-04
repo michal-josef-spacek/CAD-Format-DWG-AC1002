@@ -180,34 +180,34 @@ types:
         type: f8
         doc: 0x00c0-0x00c7
       - id: view_ctrl_x
-        size: 8
+        type: f8
         doc: 0x00c8-0x00cf, $VIEWCTRL/10
       - id: view_ctrl_y
-        size: 8
+        type: f8
         doc: 0x00d0-0x00d7, $VIEWCTRL/20
       - id: view_ctrl_z
-        size: 8
+        type: f8
         doc: 0x00d8-0x00da
       - id: view_size
-        size: 8
+        type: f8
         doc: 0x00e0-0x00e7
       - id: snap
         type: s2
         doc: 0x00e8-0x00e9, $SNAPMODE
       - id: snap_resolution_x
-        size: 8
+        type: f8
         doc: 0x00ea-0x00f1, $SNAPUNIT/10
       - id: snap_resolution_y
-        size: 8
+        type: f8
         doc: 0x00f2-0x00f9, $SNAPUNIT/20
       - id: snap_base_x
-        size: 8
+        type: f8
         doc: 0x00fa-0x0101, $SNAPBASE/10
       - id: snap_base_y
-        size: 8
+        type: f8
         doc: 0x0102-0x0109, $SNAPBASE/20
       - id: snap_angle
-        size: 8
+        type: f8
         doc: 0x010a-0x0111, $SNAPANG
       - id: snap_style
         type: s2
@@ -220,10 +220,10 @@ types:
         type: s2
         doc: 0x0116-0x0117, $GRIDMODE
       - id: grid_unit_x
-        size: 8
+        type: f8
         doc: 0x0118-0x011f, $GRIDUNIT/10
       - id: grid_unit_y
-        size: 8
+        type: f8
         doc: 0x0120-0x0127, $GRIDUNIT/20
       - id: ortho
         type: s2
@@ -241,13 +241,13 @@ types:
         type: s2
         doc: 0x0130-0x0131, $DRAGMODE
       - id: linetype_scale
-        size: 8
+        type: f8
         doc: 0x0132-0x0139, $LTSCALE
       - id: text_size
-        size: 8
+        type: f8
         doc: 0x013a-0x0141, $TEXTSIZE
       - id: trace_width
-        size: 8
+        type: f8
         doc: 0x0142-0x0149, $TRACEWID
       - id: current_layer
         type: s2
@@ -281,16 +281,16 @@ types:
         type: s2
         doc: 0x0168-0x0169, $AXISMODE
       - id: axis_value_x
-        size: 8
+        type: f8
         doc: 0x016a-0x171, $AXISUNIT/10
       - id: axis_value_y
-        size: 8
+        type: f8
         doc: 0x0172-0x0179, $AXISUNIT/20
       - id: sketch_increment
-        size: 8
+        type: f8
         doc: 0x017a-0x0181, $SKETCHINC
       - id: fillet_radius
-        size: 8
+        type: f8
         doc: $FILETRAD
       - id: units_for_angles
         enum: units_for_angles
@@ -316,34 +316,34 @@ types:
         encoding: ASCII
         doc: $MENU
       - id: dim_scale
-        size: 8
+        type: f8
         doc: $DIMSCALE
       - id: dim_arrowhead_size
-        size: 8
+        type: f8
         doc: $DIMASZ
       - id: dim_extension_line_offset
-        size: 8
+        type: f8
         doc: $DIMEXO
       - id: dim_baseline_spacing
-        size: 8
+        type: f8
         doc: $DIMDLI
       - id: dim_extension_line_extend
-        size: 8
+        type: f8
         doc: $DIMEXE
       - id: dim_maximum_tolerance_limit
-        size: 8
+        type: f8
         doc: 0x01cb-0x01d2, $DIMTP
       - id: dim_minimum_tolerance_limit
-        size: 8
+        type: f8
         doc: 0x01d3-0x01da, $DIMTM
       - id: dim_text_height
-        size: 8
+        type: f8
         doc: 0x01db-0x01e2, $DIMTXT
       - id: dim_center_mark_control
-        size: 8
+        type: f8
         doc: 0x01e3-0x01ea, $DIMCEN
       - id: dim_oblique_stroke_size
-        size: 8
+        type: f8
         doc: 0x01eb-0x01f2, $DIMTSZ
       - id: dim_tolerances
         type: s1
@@ -373,19 +373,19 @@ types:
       - id: unknown10
         size: 45
       - id: elevation
-        size: 8
+        type: f8
         doc: $ELEVATION
       - id: thickness
-        size: 8
+        type: f8
         doc: $THICKNESS
       - id: view_point_x
-        size: 8
+        type: f8
         doc: 0x0239-0x0241, $VIEWDIR/10
       - id: view_point_y
-        size: 8
+        type: f8
         doc: 0x0242-0x0249, $VIEWDIR/20
       - id: view_point_z
-        size: 8
+        type: f8
         doc: 0x024a-0x0251, $VIEWDIR/30
       - id: unknown11
         type: f8
@@ -434,10 +434,10 @@ types:
         type: s1
         doc: 0x02e5, $DIMZIN
       - id: dim_rounding
-        size: 8
+        type: f8
         doc: 0x02e6-0x02ed, $DIMRND
       - id: dim_extension_line_extend2
-        size: 8
+        type: f8
         doc: 0x02ee-0x02f5, $DIMDLE
       - id: dim_arrowhead_block
         size: 32
@@ -501,7 +501,7 @@ types:
       - id: unknown34
         type: f8
       - id: angle_base
-        size: 8
+        type: f8
         doc: 0x0353-0x035a, $ANGBASE
       - id: angle_direction
         enum: angle_direction
@@ -511,10 +511,10 @@ types:
         type: s2
         doc: 0x035d-0x035e, $PDMODE
       - id: point_size
-        size: 8
+        type: f8
         doc: $PDSIZE
       - id: polyline_width
-        size: 8
+        type: f8
         doc: $PLINEWID
       - id: user_integer_1
         type: s2
@@ -537,23 +537,23 @@ types:
         doc: 0x0367-0x0368, $USERI5
         if: version_micro == 114
       - id: user_real_1
-        size: 8
+        type: f8
         doc: $USERR1
         if: version_micro == 114
       - id: user_real_2
-        size: 8
+        type: f8
         doc: $USERR2
         if: version_micro == 114
       - id: user_real_3
-        size: 8
+        type: f8
         doc: $USERR3
         if: version_micro == 114
       - id: user_real_4
-        size: 8
+        type: f8
         doc: $USERR4
         if: version_micro == 114
       - id: user_real_5
-        size: 8
+        type: f8
         doc: $USERR5
         if: version_micro == 114
     instances:
