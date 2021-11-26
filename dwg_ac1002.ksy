@@ -1030,33 +1030,48 @@ types:
         type: entity_common
       - id: x
         type: f8
+        doc: TEXT/10
       - id: y
         type: f8
+        doc: TEXT/20
       - id: height
         type: f8
+        doc: TEXT/40
       - id: size
         type: s2
       - id: value
         size: size
+        doc: TEXT/1
       - id: angle
         type: f8
         if: entity_common.flag2_8
-      - id: unknown1
+        doc: TEXT/50
+      - id: width_factor
         type: f8
         if: entity_common.flag2_7
-      - id: unknown2
+        doc: TEXT/41
+      - id: obliquing_angle
         type: f8
         if: entity_common.flag2_6
-      - id: unknown3
+        doc: TEXT/51
+      - id: style_index
         type: u1
         if: entity_common.flag2_5
-      - id: unknown4
+        doc: TEXT/7
+      - id: generation
+        type: generation_flags
+        if: entity_common.flag2_4
+        doc: TEXT/71
+      - id: type
+        enum: text_type
         type: u1
         if: entity_common.flag2_3
-      - id: unknown5
+        doc: TEXT/72
+      - id: aligned_to_x
         type: f8
         if: entity_common.flag2_2
-      - id: unknown6
+        doc: TEXT/11
+      - id: aligned_to_y
         type: f8
         if: entity_common.flag2_2
   entity_trace:
@@ -1333,6 +1348,24 @@ types:
         type: s2
       - id: u4
         type: u1
+  generation_flags:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: upside_down
+        type: b1
+      - id: backwards
+        type: b1
+      - id: flag8
+        type: b1
 enums:
   entities:
     1: line
@@ -1406,3 +1439,7 @@ enums:
     6: magenta
     7: white
     256: bylayer
+  text_type:
+    1: center
+    2: end
+    3: aligned
