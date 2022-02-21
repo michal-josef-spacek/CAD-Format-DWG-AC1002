@@ -44,6 +44,10 @@ seq:
     type: real_entities
     size: header.blocks_end - header.blocks_start
     if: header.blocks_end != 0
+  - id: todo
+    size-eos: true
+    repeat: eos
+    if: not _io.eof
 types:
   block:
     seq:
