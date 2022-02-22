@@ -1,7 +1,6 @@
 TODO
 ====
 4. Update layer_flag from 2.10
-5. Add view_flag
 6. Rename text_style to text_style_index
 7. Rename current_layer to current_layer_index
 8.
@@ -15,4 +14,7 @@ OK [20211004] skim
 OK [20211126] skim
 
 1. Improve doc methods
+OK [20220223] skim
+
+5. Add view_flag
 OK [20220223] skim
