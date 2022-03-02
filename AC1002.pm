@@ -2710,7 +2710,7 @@ sub _read {
     $self->{zero_one_or_three} = $self->{_io}->read_s1();
     $self->{version_major} = $self->{_io}->read_s2le();
     $self->{num_sections} = $self->{_io}->read_s2le();
-    $self->{version_micro} = $self->{_io}->read_s2le();
+    $self->{num_header_vars} = $self->{_io}->read_s2le();
     $self->{dwg_version} = $self->{_io}->read_s1();
     $self->{entities_start} = $self->{_io}->read_s4le();
     $self->{entities_end} = $self->{_io}->read_s4le();
@@ -2855,34 +2855,34 @@ sub _read {
     $self->{point_mode} = $self->{_io}->read_s2le();
     $self->{point_size} = $self->{_io}->read_f8le();
     $self->{polyline_width} = $self->{_io}->read_f8le();
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_integer_1} = $self->{_io}->read_s2le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_integer_2} = $self->{_io}->read_s2le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_integer_3} = $self->{_io}->read_s2le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_integer_4} = $self->{_io}->read_s2le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_integer_5} = $self->{_io}->read_s2le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_real_1} = $self->{_io}->read_f8le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_real_2} = $self->{_io}->read_f8le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_real_3} = $self->{_io}->read_f8le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_real_4} = $self->{_io}->read_f8le();
     }
-    if ($self->version_micro() == 114) {
+    if ($self->num_header_vars() == 114) {
         $self->{user_real_5} = $self->{_io}->read_f8le();
     }
 }
@@ -2926,9 +2926,9 @@ sub num_sections {
     return $self->{num_sections};
 }
 
-sub version_micro {
+sub num_header_vars {
     my ($self) = @_;
-    return $self->{version_micro};
+    return $self->{num_header_vars};
 }
 
 sub dwg_version {

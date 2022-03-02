@@ -83,7 +83,7 @@ types:
         type: s2
       - id: num_sections
         type: s2
-      - id: version_micro
+      - id: num_header_vars
         type: s2
       - id: dwg_version
         type: s1
@@ -494,43 +494,43 @@ types:
       - id: user_integer_1
         type: s2
         doc: 0x035f-0x0360, $USERI1
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_integer_2
         type: s2
         doc: 0x0361-0x0362, $USERI2
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_integer_3
         type: s2
         doc: 0x0363-0x0364, $USERI3
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_integer_4
         type: s2
         doc: 0x0365-0x0366, $USERI4
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_integer_5
         type: s2
         doc: 0x0367-0x0368, $USERI5
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_real_1
         type: f8
         doc: $USERR1
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_real_2
         type: f8
         doc: $USERR2
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_real_3
         type: f8
         doc: $USERR3
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_real_4
         type: f8
         doc: $USERR4
-        if: version_micro == 114
+        if: num_header_vars == 114
       - id: user_real_5
         type: f8
         doc: $USERR5
-        if: version_micro == 114
+        if: num_header_vars == 114
     instances:
       create_date:
         value: create_date_days + (create_date_ms / 86400000.0)
