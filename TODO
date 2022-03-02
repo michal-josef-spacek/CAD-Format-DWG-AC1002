@@ -4,7 +4,6 @@ TODO
 6. Rename text_style to text_style_index
 8. Rewrite to point_2d and point_3d
 9. Rename version_micro
-10. Add table type and rewrite to it.
 11. Add header_variables
 12.
 
@@ -24,3 +23,6 @@ OK [20220223] skim
 
 7. Rename current_layer to current_layer_index
 OK [20220223] skim
+
+10. Add table type and rewrite to it.
+OK [20220303] skim
