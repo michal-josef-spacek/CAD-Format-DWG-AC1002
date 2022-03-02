@@ -54,12 +54,10 @@ types:
       - id: unknown1
         type: s1
       - id: block_name
-        size: 31
+        size: 32
         type: str
         encoding: ASCII
         terminator: 0x00
-      - id: u1
-        type: s1
       - id: u2
         type: s1
       - id: u3

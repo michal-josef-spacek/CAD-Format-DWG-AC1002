@@ -1829,8 +1829,7 @@ sub _read {
     my ($self) = @_;
 
     $self->{unknown1} = $self->{_io}->read_s1();
-    $self->{block_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 0, 0));
-    $self->{u1} = $self->{_io}->read_s1();
+    $self->{block_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
     $self->{u2} = $self->{_io}->read_s1();
     $self->{u3} = $self->{_io}->read_s1();
     $self->{u4} = $self->{_io}->read_s1();
@@ -1846,11 +1845,6 @@ sub unknown1 {
 sub block_name {
     my ($self) = @_;
     return $self->{block_name};
-}
-
-sub u1 {
-    my ($self) = @_;
-    return $self->{u1};
 }
 
 sub u2 {
