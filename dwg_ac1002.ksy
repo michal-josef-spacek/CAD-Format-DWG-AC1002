@@ -51,8 +51,9 @@ seq:
 types:
   block:
     seq:
-      - id: unknown1
-        type: s1
+      - id: flag
+        type: block_flag
+        doc: BLOCK/70
       - id: block_name
         size: 32
         type: str
@@ -68,6 +69,24 @@ types:
         type: s1
       - id: u6
         type: s1
+  block_flag:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: flag6
+        type: b1
+      - id: flag7
+        type: b1
+      - id: flag8
+        type: b1
   header:
     seq:
       - id: magic
