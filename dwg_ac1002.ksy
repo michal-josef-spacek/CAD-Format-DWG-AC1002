@@ -59,6 +59,7 @@ types:
         type: str
         encoding: ASCII
         terminator: 0x00
+        doc: BLOCK/2
       - id: u2
         type: s1
       - id: u3
