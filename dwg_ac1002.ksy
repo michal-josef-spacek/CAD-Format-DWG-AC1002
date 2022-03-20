@@ -130,6 +130,20 @@ types:
         type: table
       - id: table_view
         type: table
+      - id: variables
+        type: header_variables
+  table:
+    seq:
+      - id: item_size
+        type: u2
+      - id: items
+        type: u2
+      - id: unknown
+        size: 2
+      - id: begin
+        type: u4
+  header_variables:
+    seq:
       - id: insertion_base
         type: point_3d
         doc: 0x005e-0x0075, $INSBASE/10|20|30
@@ -465,59 +479,48 @@ types:
       - id: user_integer_1
         type: s2
         doc: 0x035f-0x0360, $USERI1
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_integer_2
         type: s2
         doc: 0x0361-0x0362, $USERI2
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_integer_3
         type: s2
         doc: 0x0363-0x0364, $USERI3
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_integer_4
         type: s2
         doc: 0x0365-0x0366, $USERI4
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_integer_5
         type: s2
         doc: 0x0367-0x0368, $USERI5
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_real_1
         type: f8
         doc: $USERR1
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_real_2
         type: f8
         doc: $USERR2
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_real_3
         type: f8
         doc: $USERR3
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_real_4
         type: f8
         doc: $USERR4
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
       - id: user_real_5
         type: f8
         doc: $USERR5
-        if: num_header_vars == 114
+        if: _root.header.num_header_vars == 114
     instances:
       create_date:
         value: create_date_days + (create_date_ms / 86400000.0)
       update_date:
         value: update_date_days + (update_date_ms / 86400000.0)
-      ## TODO
-  table:
-    seq:
-      - id: item_size
-        type: u2
-      - id: items
-        type: u2
-      - id: unknown
-        size: 2
-      - id: begin
-        type: u4
   entity:
     seq:
       - id: entity_type
