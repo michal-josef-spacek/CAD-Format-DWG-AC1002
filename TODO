@@ -1,6 +1,5 @@
 TODO
 ====
-12. Sync attdef and attrib with previous version.
 13.
 
 Applied
@@ -37,3 +36,6 @@ OK [20220320] skim
 
 6. Rename text_style to text_style_index
 OK [20220320] skim
+
+12. Sync attdef and attrib with previous version.
+OK [20220424] skim
