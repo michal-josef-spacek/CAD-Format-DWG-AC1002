@@ -1177,7 +1177,7 @@ types:
         type: s2
         doc: LAYER/62
       - id: linetype_index
-        type: u2
+        type: s2
         doc: LAYER/6
       - id: u1
         type: s1
