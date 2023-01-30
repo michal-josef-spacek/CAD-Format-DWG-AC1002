@@ -273,7 +273,7 @@ types:
       - id: attributes
         enum: attributes
         type: s2
-        doc: 0x0192-0x0193, $ATTMODE
+        doc: 0x0192-0x0193, $ATTMODE/70
       - id: menu
         size: 15
         type: str
@@ -462,72 +462,72 @@ types:
         doc: $TDUSRTIMER/ms
       - id: user_timer
         type: s2
-        doc: 0x033f-0x0340, $USRTIMER
+        doc: 0x033f-0x0340, $USRTIMER/70
       - id: fast_zoom
         type: u2
         doc: 0x0341-0x0342, $FASTZOOM
       - id: sketch_type
         type: u2
-        doc: 0x0343-0x0344, $SKPOLY
+        doc: 0x0343-0x0344, $SKPOLY/70
       - id: unknown33b
         size: 6
       - id: unknown34
         type: f8
       - id: angle_base
         type: f8
-        doc: 0x0353-0x035a, $ANGBASE
+        doc: 0x0353-0x035a, $ANGBASE/50
       - id: angle_direction
         enum: angle_direction
         type: s2
-        doc: 0x035b-0x035c, $ANGDIR
+        doc: 0x035b-0x035c, $ANGDIR/70
       - id: point_mode
         type: s2
-        doc: 0x035d-0x035e, $PDMODE
+        doc: 0x035d-0x035e, $PDMODE/70
       - id: point_size
         type: f8
-        doc: $PDSIZE
+        doc: $PDSIZE/40
       - id: polyline_width
         type: f8
-        doc: $PLINEWID
+        doc: $PLINEWID/40
       - id: user_integer_1
         type: s2
-        doc: 0x035f-0x0360, $USERI1
+        doc: 0x035f-0x0360, $USERI1/70
         if: _root.header.num_header_vars == 114
       - id: user_integer_2
         type: s2
-        doc: 0x0361-0x0362, $USERI2
+        doc: 0x0361-0x0362, $USERI2/70
         if: _root.header.num_header_vars == 114
       - id: user_integer_3
         type: s2
-        doc: 0x0363-0x0364, $USERI3
+        doc: 0x0363-0x0364, $USERI3/70
         if: _root.header.num_header_vars == 114
       - id: user_integer_4
         type: s2
-        doc: 0x0365-0x0366, $USERI4
+        doc: 0x0365-0x0366, $USERI4/70
         if: _root.header.num_header_vars == 114
       - id: user_integer_5
         type: s2
-        doc: 0x0367-0x0368, $USERI5
+        doc: 0x0367-0x0368, $USERI5/70
         if: _root.header.num_header_vars == 114
       - id: user_real_1
         type: f8
-        doc: $USERR1
+        doc: $USERR1/40
         if: _root.header.num_header_vars == 114
       - id: user_real_2
         type: f8
-        doc: $USERR2
+        doc: $USERR2/40
         if: _root.header.num_header_vars == 114
       - id: user_real_3
         type: f8
-        doc: $USERR3
+        doc: $USERR3/40
         if: _root.header.num_header_vars == 114
       - id: user_real_4
         type: f8
-        doc: $USERR4
+        doc: $USERR4/40
         if: _root.header.num_header_vars == 114
       - id: user_real_5
         type: f8
-        doc: $USERR5
+        doc: $USERR5/40
         if: _root.header.num_header_vars == 114
     instances:
       create_date:
