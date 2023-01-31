@@ -604,7 +604,7 @@ types:
             _: entity_tmp
   entity_mode:
     seq:
-      - id: entity_has_attributes_flag
+      - id: has_attributes
         type: b1
       - id: entity_mode2
         type: b1
@@ -612,13 +612,13 @@ types:
         type: b1
       - id: entity_mode4
         type: b1
-      - id: entity_thickness_flag
+      - id: has_thickness
         type: b1
-      - id: entity_elevation_flag
+      - id: has_elevation
         type: b1
-      - id: entity_linetype_flag
+      - id: has_linetype
         type: b1
-      - id: entity_color_flag
+      - id: has_color
         type: b1
   entity_common:
     seq:
@@ -666,16 +666,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: center_point
         type: point_2d
         doc: ARC/10|20
@@ -700,16 +700,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: start_point
         type: point_2d
         doc: ATTDEF/10|20
@@ -802,16 +802,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: point_from
         type: point_2d
         doc: ATTRIB/10|20
@@ -896,16 +896,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: insert_point
         type: point_2d
         doc: BLOCK/10|20
@@ -921,16 +921,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
   entity_insert:
     seq:
       - id: entity_mode
@@ -943,16 +943,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: block_index
         type: s2
         doc: INSERT/2
@@ -1006,16 +1006,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: center_point
         type: point_2d
         doc: CIRCLE/10|20
@@ -1034,16 +1034,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: block_index
         type: s2
       - id: dimension_line_defining_point
@@ -1106,16 +1106,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
   entity_line:
     seq:
       - id: entity_mode
@@ -1128,16 +1128,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: x1
         type: f8
         doc: LINE/10
@@ -1162,16 +1162,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: x1
         type: f8
         doc: 3DLINE/10
@@ -1212,16 +1212,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: x
         type: f8
         doc: POINT/10
@@ -1240,16 +1240,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: flag
         type: polyline_flags
         if: entity_common.flag2_8
@@ -1292,16 +1292,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: unknown
         size: 4
   entity_shape:
@@ -1316,16 +1316,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: x
         type: f8
         doc: SHAPE/10
@@ -1357,16 +1357,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: from
         type: point_2d
       - id: from_and
@@ -1387,16 +1387,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: insert_point
         type: point_2d
         doc: TEXT/10|20
@@ -1452,16 +1452,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: from
         type: point_2d
       - id: from_and
@@ -1482,16 +1482,16 @@ types:
         type: entity_common
       - id: entity_color
         type: s1
-        if: entity_mode.entity_color_flag
+        if: entity_mode.has_color
       - id: entity_linetype_index
         type: s1
-        if: entity_mode.entity_linetype_flag
+        if: entity_mode.has_linetype
       - id: entity_elevation
         type: f8
-        if: entity_mode.entity_elevation_flag
+        if: entity_mode.has_elevation
       - id: entity_thickness
         type: f8
-        if: entity_mode.entity_thickness_flag
+        if: entity_mode.has_thickness
       - id: x
         type: f8
         doc: VERTEX/10
